@@ -1,0 +1,32 @@
+<script type="text/javascript">
+  RED.nodes.registerType('fd-config', {
+    category: 'config',
+    defaults: {
+      subdomain: {value: "", required:true},
+      key: {value: "", required:true},
+      defaultuser: {value: "", required:true, type: "integer"},
+      defaultgroup: {value: "", required:true, type: "integer"}
+    },
+    label: function () {
+      return this.subdomain + ".freshdesk.com";
+    }
+  });
+</script>
+<script type="text/x-red" data-template-name="fd-config">
+  <div class="form-row">
+    <label for="node-config-input-subdomain"><i class="icon-globe"></i> Subdomain</label>
+    <input type="text" id="node-config-input-subdomain">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-key"><i class="icon-pencil"></i> API key</label>
+    <input type="text" id="node-config-input-key">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-defaultuser"><i class="icon-user"></i> Default user ID</label>
+    <input type="text" id="node-config-input-defaultuser">
+  </div>
+  <div class="form-row">
+    <label for="node-config-input-defaultgroup"><i class="icon-th-large"></i> Default group ID</label>
+    <input type="text" id="node-config-input-defaultgroup">
+  </div>
+</script>

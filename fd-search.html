@@ -1,0 +1,26 @@
+<script type="text/javascript">
+  RED.nodes.registerType('fd-search', {
+    category: 'function',
+    color: '#4fb29d',
+    inputs: 1,
+    outputs: 1,
+    defaults: {
+      name: {value: "Search for tickets"},
+      api: {value: "", type: "fd-config"}
+    },
+    label: function (){
+      return this.name || "Search for tickets";
+    }
+  });
+</script>
+<script type="text/x-red" data-template-name="fd-search">
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name">
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-api"><i class="icon-tag"></i> Freshdesk</label>
+    <input type="text" id="node-input-api">
+  </div>
+</script>
